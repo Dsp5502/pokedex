@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos para el efecto hover */
+.pokemon-card:hover {
+  border: 2px solid #00b4ff;
+  transition: border 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para que el borde parezca que se está moviendo */
+@keyframes border-move {
+  0% {
+    border-color: #00b4ff;
+  }
+  25% {
+    border-color: #b400ff;
+  }
+  50% {
+    border-color: #ff00b4;
+  }
+  75% {
+    border-color: #ffb400;
+  }
+  100% {
+    border-color: #00b4ff;
+  }
+}
+
+.pokemon-card:hover {
+  animation: border-move 5s linear infinite;
+}
